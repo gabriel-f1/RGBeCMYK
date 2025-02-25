@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Vs CMYK</title>
+    <link rel="icon" type="image/x-icon" href="imgs/iconesite.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><b><span style="font-size: 140%;">RGB x CMYK:</span><br></b> Dois lados de uma moeda</header>
+    <main>
+        <!-- fontes: 
+         https://instrucoes.graficacores.com.br/dicas-e-tutoriais/entenda-a-diferenca-entre-rgb-e-cmyk/
+         https://www.squids.com.br/arduino/projetos-arduino/projetos-squids/basico/95-projeto-23-usando-o-led-rgb
+         https://gerenciamentodecor.wordpress.com/2016/02/20/cores-sistema-aditivo-e-substrativo/
+         https://www.printingcenterusa.com/blog/what-is-cmyk-and-why-is-it-used-for-printing/
+         https://www.printi.com.br/blog/o-que-sao-rgb-e-cmyk
+         https://blog.thenounproject.com/rgb-vs-cmyk-understanding-the-differences/
+          -->
+        <p class="titulo">Contexto</p>
+        <img src="imgs/cmykxrgb1.png" alt="comparationings">
+        <p class="paragrafo">Imagine isso: Você enviou seu material de marketing para a gráfica, mas eles responderam que as cores da impressão ficarão bem diferentes do que você esperava.
+            Isso acontece porque a impressora usa um sistema de cores diferente. 
+            A gráfica explicou que o arquivo original precisa ser convertido do formato RGB para CMYK para que as cores saiam corretamente na impressão. 
+            <br><br>Mas afinal, oque é RGB e CMYK?</p>
+        <p class="titulo">O modelo aditivo RGB</p>
+        <img src="imgs/rgbmodelo.jpg" style="width: 50%;" alt="rgb">
+        <p class="paragrafo">O RGB é um modelo aditivo de cores que é um sistema baseado na emissão de luz, onde as cores são formadas pela combinação de três cores primárias: vermelho <b>(Red - R)</b>,
+             verde <b>(Green - G)</b> e azul <b>(Blue - B)</b>. Esse modelo é utilizado em dispositivos emissores de luz, como telas de computadores, televisores e projetores.</p>
+        <p class="subtitulo">Combinação de Cores no Modelo Aditivo</p>
+        <p class="paragrafo">Cada pixel em uma tela digital não é uma única unidade de cor, mas sim um conjunto de três subpixels menores, onde podem representar vermelho, verde ou azul (RGB).
+            Esses subpixels emitem luz de diferentes intensidades e, quando combinados, formam a cor percebida pelo olho humano. Como os subpixels são muito pequenos e ficam próximos uns dos outros,
+             o cérebro "traduz" eles como uma única cor. <br><br><span style="font-size: 150%;">Observe o exemplo:</span><br><br>0 significa que o subpixel está completamente apagado (sem luz).<br>
+             255 significa que o subpixel está em sua máxima intensidade (luz total).</p>
+        <img src="imgs/misturargb.jpg" style="width: 40%; height: auto;" alt="misturargb">
+        <p class="titulo">Modelo Subtrativo de Cores (CMYK)</p>
+        <img src="imgs/cmykmodelo.png" style="width: 60%;" alt="cmyk">
+        <p class="paragrafo">O modelo subtrativo é utilizado em impressões e baseia-se na absorção de luz pelos pigmentos, ao contrário do modelo aditivo (RGB), que trabalha com a emissão de luz. 
+            Nesse modelo, as cores são formadas pela subtração de comprimentos de onda da luz branca, deixando apenas a cor refletida visível.</p>
+        <p class="subtitulo">Mistura dos Pigmentos</p>
+        <p class="paragrafo">As três cores primárias do modelo subtrativo são: <br> <br>
+            <b>Ciano (C)<br>
+            Magenta (M)<br>
+            Amarelo (Y)</b> <br> <br>Quando combinadas, elas formam novas cores:</p>
+        <img src="imgs/misturacmyk.png" alt="misturacmyk">
+        <p class="paragrafo">Porém, atente-se a um detalhe: na prática, a mistura de 100% dos três pigmentos não resulta em um preto puro, mas sim em um tom escuro acinzentado.<br><br>Para corrigir essa limitação e melhorar a qualidade da impressão, adiciona-se a cor preta (<b>K</b>, também conhecida como "key") ao modelo CMYK.
+             Com essa "key", é possível criar cores mais escuras. O <b>K</b> no modelo <b>CMYK</b>, ajuda a obter um maior contraste, economizar tinta, e ajuda na hora de imprimir sombras e profundidade. Por isso, em impressoras e gráficas, o CMYK é utilizado para garantir impressões que façam jus a sua qualidade original, e fique o mais próximo do desejado.
+            <br><br>Observe a diferença entre impressões com os diferentes modelos.</p>
+            <img src="imgs/impressoesrgbecmyk.png" alt="diferencaalexandre">
+        <p class="titulo">Ultimato: Qual a diferença?</p>
+        <img src="imgs/diferencargbcmyk.png" alt="comparacao">
+        <p class="paragrafo">Os modelos RGB (aditivo) e CMYK (subtrativo) são sistemas de cores usados em diferentes contextos, cada um feito para um objetivo especifico.</p>
+        <p class="paragrafo">O modelo RGB é usado em dispositivos emissores de luz, como telas de computadores, televisões e celulares. Ele funciona somando valores para representar uma cor. <br> <br>
+            O modelo CMYK é utilizado em impressoras e se baseia na absorção da luz refletida no papel, onde a mistura dos três pigmentos coloridos absorve luz e deveria formar preto, 
+            mas na prática gera um tom escuro acinzentado. Por isso, adiciona-se o preto (K) para obter contraste e economia de tinta. <br> <br>
+        <span style="font-size: 150%; text-align: center;"><b>Em resumo, RGB adiciona luz para formar cores, enquanto CMYK subtrai luz ao misturar pigmentos.</b></span></p>
+        
+    </main>
+
+    <footer class="footer">
+        <p>Fontes:</p>
+        <ul>
+            <li><a href="https://instrucoes.graficacores.com.br/dicas-e-tutoriais/entenda-a-diferenca-entre-rgb-e-cmyk/" target="_blank">Gráfica Cores</a></li>
+            <li><a href="https://www.squids.com.br/arduino/projetos-arduino/projetos-squids/basico/95-projeto-23-usando-o-led-rgb" target="_blank">Squids - LED RGB</a></li>
+            <li><a href="https://gerenciamentodecor.wordpress.com/2016/02/20/cores-sistema-aditivo-e-substrativo/" target="_blank">Gerenciamento de Cor</a></li>
+            <li><a href="https://www.printingcenterusa.com/blog/what-is-cmyk-and-why-is-it-used-for-printing/" target="_blank">Printing Center USA</a></li>
+            <li><a href="https://www.printi.com.br/blog/o-que-sao-rgb-e-cmyk" target="_blank">Printi - RGB vs CMYK</a></li>
+            <li><a href="https://blog.thenounproject.com/rgb-vs-cmyk-understanding-the-differences/" target="_blank">The Noun Project</a></li>
+        </ul>
+        <p class="footer-creditosadar">Desenvolvido por Gabriel Fontoura Melo.</p>
+    </footer>
+</body>
+</html>
